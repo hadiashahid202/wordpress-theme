@@ -17,18 +17,18 @@ function my_custom_widgets() {
     ));
 }
 add_action('widgets_init', 'my_custom_widgets');
-function create_blog_post_type() {
-    register_post_type('blog', array(
-        'labels' => array(
-            'name' => __('Blog'),
-            'singular_name' => __('Blog Post')
-        ),
-        'public' => true,
-        'has_archive' => true,
-        'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'comments')
-    ));
-}
-add_action('init', 'create_blog_post_type');
+// function create_blog_post_type() {
+//     register_post_type('blog', array(
+//         'labels' => array(
+//             'name' => __('Blog'),
+//             'singular_name' => __('Blog Post')
+//         ),
+//         'public' => true,
+//         'has_archive' => true,
+//         'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'comments')
+//     ));
+// }
+// add_action('init', 'create_blog_post_type');
 
 function custom_property_post_type() {
     $args = array(
