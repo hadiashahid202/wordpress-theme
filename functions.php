@@ -30,7 +30,7 @@ function create_blog_post_type() {
 }
 add_action('init', 'create_blog_post_type');
 
-function custom_properties_post_type() {
+function custom_property_post_type() {
     $args = array(
         'label'  => 'Property',
         'public' => true,

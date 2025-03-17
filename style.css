@@ -9,8 +9,145 @@ License: GNU General Public License v2 or later
 Text Domain: aurora
 */
 
+
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+} */
+
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    color: #333;
+    background: #f9f9f9;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+/* Main Content */
+main {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+/* Site Header */
+.site-header {
+    background: #CE6060;
+    padding: 20px;
+    text-align: center;
+}
+
+.site-header .logo a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.main-nav {
+    margin-top: 10px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Hero Section */
+body > main > section.hero-section {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section {
+    position: relative;
+    text-align: center;
+    padding: 80px 20px;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('assets/villa.jpeg') no-repeat center center/cover;
+}
+
+.hero-section h1, .hero-section p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-section h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-section .btn {
+    background: #CE6060;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Featured Posts */
+.featured-posts {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.posts-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.post-card {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+}
+
+.read-more {
+    color: #CE4040;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    background: #CE6060;
+    color: white;
 }

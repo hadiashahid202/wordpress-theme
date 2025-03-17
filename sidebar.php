@@ -1,5 +1,5 @@
 <aside>
-    <?php if (is_active_sidebar('sidebar-1')) : ?>
-        <?php dynamic_sidebar('sidebar-1'); ?>
+    <?php if (is_active_sidebar('main-sidebar')) : ?>
+        <?php dynamic_sidebar('main-sidebar'); ?>
     <?php endif; ?>
 </aside>
