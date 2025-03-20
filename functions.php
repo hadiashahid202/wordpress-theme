@@ -52,12 +52,41 @@ function create_testimonial_post_type() {
             ),
             'public'      => true,
             'has_archive' => false,
-            'supports'    => array('title', 'editor'),
-            'menu_icon'   => 'dashicons-testimonial', // WordPress icon
+            'menu_icon'   => 'dashicons-testimonial',
+            'supports'    => array('title', 'editor', 'thumbnail'),
         )
     );
 }
 add_action('init', 'create_testimonial_post_type');
+
+
+function custom_post_type_properties() {
+    $labels = array(
+        'name'          => 'Properties',
+        'singular_name' => 'Property',
+        'menu_name'     => 'Properties',
+        'add_new'       => 'Add New Property',
+        'add_new_item'  => 'Add New Property',
+        'edit_item'     => 'Edit Property',
+        'new_item'      => 'New Property',
+        'view_item'     => 'View Property',
+        'all_items'     => 'All Properties'
+    );
+
+    $args = array(
+        'labels'       => $labels,
+        'public'       => true,
+        'has_archive'  => true,
+        'menu_icon'    => 'dashicons-admin-home',
+        'supports'     => array('title', 'editor', 'thumbnail', 'custom-fields'),
+        'rewrite'      => array('slug' => 'properties'),
+    );
+
+    register_post_type('property', $args);
+}
+add_action('init', 'custom_post_type_properties');
+
+
 
 
 ?>
