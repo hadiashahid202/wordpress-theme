@@ -43,4 +43,21 @@ function custom_property_post_type() {
 }
 add_action('init', 'custom_property_post_type');
 
+function create_testimonial_post_type() {
+    register_post_type('testimonial',
+        array(
+            'labels'      => array(
+                'name'          => __('Testimonials'),
+                'singular_name' => __('Testimonial'),
+            ),
+            'public'      => true,
+            'has_archive' => false,
+            'supports'    => array('title', 'editor'),
+            'menu_icon'   => 'dashicons-testimonial', // WordPress icon
+        )
+    );
+}
+add_action('init', 'create_testimonial_post_type');
+
+
 ?>

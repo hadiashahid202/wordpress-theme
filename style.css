@@ -151,3 +151,42 @@ body > main > section.hero-section {
     background: #CE6060;
     color: white;
 }
+
+
+.testimonial-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.testimonial {
+    background: white;
+    padding: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 320px;
+    text-align: center;
+    border-top: 5px solid #CE6060;
+}
+
+.testimonial-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #CE6060;
+    margin-bottom: 10px;
+}
+
+.testimonial-text {
+    font-style: italic;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    padding: 10px;
+}

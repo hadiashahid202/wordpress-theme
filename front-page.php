@@ -8,6 +8,33 @@
 
     </section>
 
+    <section class="testimonial-section">
+    <h2>What Our Clients Say</h2>
+    <?php
+    $testimonial_query = new WP_Query(array(
+        'post_type'      => 'testimonial', // Only fetch testimonials
+        'posts_per_page' => 3,  // Adjust as needed
+    ));
+
+    if ($testimonial_query->have_posts()) {
+        echo '<div class="testimonials-container">';
+        while ($testimonial_query->have_posts()) : $testimonial_query->the_post();
+            ?>
+            <div class="testimonial">
+                <h3 class="testimonial-title"><?php the_title(); ?></h3>
+                <p class="testimonial-text"><?php the_content(); ?></p>
+            </div>
+            <?php
+        endwhile;
+        echo '</div>';
+    } else {
+        echo '<p>No testimonials found. Please add some.</p>';
+    }
+    wp_reset_postdata();
+    ?>
+</section>
+
+
     <section class="featured-posts">
         <h2>Latest Blog Posts</h2>
         <div class="posts-grid">
@@ -23,6 +50,8 @@
             <?php endwhile; wp_reset_postdata(); ?>
         </div>
     </section>
+
+   
 </main>
 
 <?php get_footer(); ?>
